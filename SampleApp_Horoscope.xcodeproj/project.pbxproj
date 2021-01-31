@@ -13,6 +13,7 @@
 		2A2DD6E725C60C6F00F152F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A2DD6E525C60C6F00F152F6 /* Main.storyboard */; };
 		2A2DD6E925C60C7100F152F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A2DD6E825C60C7100F152F6 /* Assets.xcassets */; };
 		2A2DD6EC25C60C7100F152F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A2DD6EA25C60C7100F152F6 /* LaunchScreen.storyboard */; };
+		2A2DD6F625C6219400F152F6 /* JudgeHoroscopeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2DD6F525C6219400F152F6 /* JudgeHoroscopeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		2A2DD6E825C60C7100F152F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A2DD6EB25C60C7100F152F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A2DD6ED25C60C7100F152F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2A2DD6F525C6219400F152F6 /* JudgeHoroscopeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JudgeHoroscopeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		2A2DD6DE25C60C6F00F152F6 /* SampleApp_Horoscope */ = {
 			isa = PBXGroup;
 			children = (
+				2A2DD6F825C621A000F152F6 /* JudgeHoroscope */,
 				2A2DD6DF25C60C6F00F152F6 /* AppDelegate.swift */,
 				2A2DD6E125C60C6F00F152F6 /* SceneDelegate.swift */,
 				2A2DD6E325C60C6F00F152F6 /* ViewController.swift */,
@@ -65,6 +68,14 @@
 				2A2DD6ED25C60C7100F152F6 /* Info.plist */,
 			);
 			path = SampleApp_Horoscope;
+			sourceTree = "<group>";
+		};
+		2A2DD6F825C621A000F152F6 /* JudgeHoroscope */ = {
+			isa = PBXGroup;
+			children = (
+				2A2DD6F525C6219400F152F6 /* JudgeHoroscopeViewController.swift */,
+			);
+			path = JudgeHoroscope;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +149,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A2DD6E425C60C6F00F152F6 /* ViewController.swift in Sources */,
+				2A2DD6F625C6219400F152F6 /* JudgeHoroscopeViewController.swift in Sources */,
 				2A2DD6E025C60C6F00F152F6 /* AppDelegate.swift in Sources */,
 				2A2DD6E225C60C6F00F152F6 /* SceneDelegate.swift in Sources */,
 			);
@@ -296,7 +308,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Mimi.SampleApp-Horoscope";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -315,7 +327,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Mimi.SampleApp-Horoscope";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
