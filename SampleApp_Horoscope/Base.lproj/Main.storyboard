@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="bXS-bw-ylM"/>
-                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="jlC-TZ-bkV"/>
                 </viewController>
@@ -41,31 +41,770 @@
             </objects>
             <point key="canvasLocation" x="696" y="533"/>
         </scene>
-        <!--View Controller-->
+        <!--Horoscope View Controller-->
         <scene sceneID="tMP-4f-whU">
             <objects>
-                <viewController id="nto-M2-EkL" sceneMemberID="viewController">
+                <viewController id="nto-M2-EkL" customClass="HoroscopeViewController" customModule="SampleApp_Horoscope" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="whp-2Z-UuQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1x-1z-xu3">
-                                <rect key="frame" x="184" y="415" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="0j6-uS-ybD" kind="show" id="7Rp-0H-2Zt"/>
-                                </connections>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12星座占い" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L81-Y9-nyi">
+                                <rect key="frame" x="116.5" y="121" width="142.5" height="33.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="PPp-NR-lLW">
+                                <rect key="frame" x="41.5" y="164.5" width="292" height="378"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="Hge-a4-3vH">
+                                        <rect key="frame" x="0.0" y="0.0" width="292" height="90"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SRA-4c-b3S">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="ASa-gm-e7D"/>
+                                                    <constraint firstAttribute="width" constant="90" id="qHT-sI-pZP"/>
+                                                </constraints>
+                                                <inset key="titleEdgeInsets" minX="0.0" minY="4" maxX="19" maxY="-63"/>
+                                                <state key="normal" image="おひつじ座">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="おひつじ座">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="10" name=".HiraKakuInterface-W3"/>
+                                                                <font key="NSOriginalFont" metaFont="system" size="9"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content=" ">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" metaFont="system" size="7"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="3/21">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" metaFont="system" size="7"/>
+                                                                <font key="NSOriginalFont" metaFont="system" size="9"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="〜">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="7" name=".HiraKakuInterface-W3"/>
+                                                                <font key="NSOriginalFont" metaFont="system" size="9"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="4/19">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" metaFont="system" size="7"/>
+                                                                <font key="NSOriginalFont" metaFont="system" size="9"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <connections>
+                                                    <action selector="horoscopeItemsButton:" destination="nto-M2-EkL" eventType="touchUpInside" id="JhJ-dJ-i2Y"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xSz-5z-Qeb">
+                                                <rect key="frame" x="101" y="0.0" width="90" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="90" id="Nk7-yb-rah"/>
+                                                    <constraint firstAttribute="height" constant="90" id="YxR-ku-CGU"/>
+                                                </constraints>
+                                                <inset key="titleEdgeInsets" minX="0.0" minY="4" maxX="25" maxY="-63"/>
+                                                <state key="normal" image="おうし座">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="お">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="10" name=".HiraKakuInterface-W3"/>
+                                                                <font key="NSOriginalFont" metaFont="system" size="9"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="うし">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="10" name=".HiraKakuInterface-W3"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="座">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="10" name=".HiraKakuInterface-W3"/>
+                                                                <font key="NSOriginalFont" metaFont="system" size="9"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content=" ">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" metaFont="system" size="7"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="4">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="7" name=".SFNS-Regular"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="/2">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="7" name=".SFNS-Regular"/>
+                                                                <font key="NSOriginalFont" metaFont="system" size="9"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="0">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="7" name=".SFNS-Regular"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="〜">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="7" name=".HiraKakuInterface-W3"/>
+                                                                <font key="NSOriginalFont" metaFont="system" size="9"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="5">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="7" name=".SFNS-Regular"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="/">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="7" name=".SFNS-Regular"/>
+                                                                <font key="NSOriginalFont" metaFont="system" size="9"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="20">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="7" name=".SFNS-Regular"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <connections>
+                                                    <action selector="horoscopeItemsButton:" destination="nto-M2-EkL" eventType="touchUpInside" id="Naq-JN-9bK"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8Op-lw-FEj">
+                                                <rect key="frame" x="202" y="0.0" width="90" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="RDR-0c-CSd"/>
+                                                    <constraint firstAttribute="width" constant="90" id="xB9-Xm-xJz"/>
+                                                </constraints>
+                                                <inset key="titleEdgeInsets" minX="0.0" minY="4" maxX="27" maxY="-63"/>
+                                                <state key="normal" image="ふたご座">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="ふたご座">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="10" name=".HiraKakuInterface-W3"/>
+                                                                <font key="NSOriginalFont" size="9" name=".HiraKakuInterface-W3"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content=" 5">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" metaFont="system" size="7"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="/21">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" metaFont="system" size="7"/>
+                                                                <font key="NSOriginalFont" metaFont="system" size="9"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="〜">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="7" name=".HiraKakuInterface-W3"/>
+                                                                <font key="NSOriginalFont" metaFont="system" size="9"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="6">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" metaFont="system" size="7"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="/">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" metaFont="system" size="7"/>
+                                                                <font key="NSOriginalFont" metaFont="system" size="9"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="21">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" metaFont="system" size="7"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <connections>
+                                                    <action selector="horoscopeItemsButton:" destination="nto-M2-EkL" eventType="touchUpInside" id="cIo-Q6-xWI"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="H2d-QM-ea3">
+                                        <rect key="frame" x="0.0" y="96" width="292" height="90"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O7U-GZ-A8i">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="Oqo-lg-Rgt"/>
+                                                    <constraint firstAttribute="width" constant="90" id="erw-av-DAZ"/>
+                                                </constraints>
+                                                <inset key="titleEdgeInsets" minX="0.0" minY="4" maxX="24" maxY="-63"/>
+                                                <state key="normal" image="かに座">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="かに">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="10" name=".HiraKakuInterface-W3"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="座">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="10" name=".HiraKakuInterface-W3"/>
+                                                                <font key="NSOriginalFont" metaFont="system" size="9"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content=" ">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" metaFont="system" size="7"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="6/22">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" metaFont="system" size="7"/>
+                                                                <font key="NSOriginalFont" metaFont="system" size="7"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="〜">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="7" name=".HiraKakuInterface-W3"/>
+                                                                <font key="NSOriginalFont" size="7" name=".HiraKakuInterface-W3"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="7/22">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" metaFont="system" size="7"/>
+                                                                <font key="NSOriginalFont" metaFont="system" size="7"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <connections>
+                                                    <action selector="horoscopeItemsButton:" destination="nto-M2-EkL" eventType="touchUpInside" id="WGt-9Y-It7"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BUl-CE-YAa">
+                                                <rect key="frame" x="101" y="0.0" width="90" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="90" id="og1-GH-PWB"/>
+                                                    <constraint firstAttribute="height" constant="90" id="qs3-WM-qle"/>
+                                                </constraints>
+                                                <inset key="titleEdgeInsets" minX="0.0" minY="4" maxX="26" maxY="-63"/>
+                                                <state key="normal" image="しし座">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="しし">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="10" name=".HiraKakuInterface-W3"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="座">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="10" name=".HiraKakuInterface-W3"/>
+                                                                <font key="NSOriginalFont" metaFont="system" size="9"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content=" ">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" metaFont="system" size="7"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="7/23">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.47563" green="0.47565000000000002" blue="0.47564000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" metaFont="system" size="7"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="～">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.47563" green="0.47565000000000002" blue="0.47564000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="7" name=".HiraKakuInterface-W3"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="8/22">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.47563" green="0.47565000000000002" blue="0.47564000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" metaFont="system" size="7"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <connections>
+                                                    <action selector="horoscopeItemsButton:" destination="nto-M2-EkL" eventType="touchUpInside" id="ity-ID-xig"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K01-Da-0cE">
+                                                <rect key="frame" x="202" y="0.0" width="90" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="om9-QI-WRr"/>
+                                                    <constraint firstAttribute="width" constant="90" id="p3I-3K-HdD"/>
+                                                </constraints>
+                                                <inset key="titleEdgeInsets" minX="0.0" minY="4" maxX="21" maxY="-63"/>
+                                                <state key="normal" image="おとめ座">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="おとめ座">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="10" name=".HiraKakuInterface-W3"/>
+                                                                <font key="NSOriginalFont" size="9" name=".HiraKakuInterface-W3"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content=" ">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" metaFont="system" size="9"/>
+                                                                <font key="NSOriginalFont" metaFont="system" size="9"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="8/23">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" metaFont="system" size="7"/>
+                                                                <font key="NSOriginalFont" metaFont="system" size="7"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="〜">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="7" name=".HiraKakuInterface-W3"/>
+                                                                <font key="NSOriginalFont" size="7" name=".HiraKakuInterface-W3"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="9/22">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" metaFont="system" size="7"/>
+                                                                <font key="NSOriginalFont" metaFont="system" size="7"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <connections>
+                                                    <action selector="horoscopeItemsButton:" destination="nto-M2-EkL" eventType="touchUpInside" id="tbp-6j-dua"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="m95-5f-5mH">
+                                        <rect key="frame" x="0.0" y="192" width="292" height="90"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="trN-AZ-jXg">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="8Sj-qK-V8u"/>
+                                                    <constraint firstAttribute="width" constant="90" id="ll6-C5-6du"/>
+                                                </constraints>
+                                                <inset key="titleEdgeInsets" minX="0.0" minY="4" maxX="20" maxY="-63"/>
+                                                <state key="normal" image="てんびん座">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="てんびん座">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="10" name=".HiraKakuInterface-W3"/>
+                                                                <font key="NSOriginalFont" size="9" name=".HiraKakuInterface-W3"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content=" ">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" metaFont="system" size="7"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="9/23">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.47563" green="0.47565000000000002" blue="0.47564000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="7" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="～">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.47563" green="0.47565000000000002" blue="0.47564000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="7" name="HiraginoSans-W3"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="10/23">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.47563" green="0.47565000000000002" blue="0.47564000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="7" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <connections>
+                                                    <action selector="horoscopeItemsButton:" destination="nto-M2-EkL" eventType="touchUpInside" id="hbT-qJ-YLo"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s7X-IE-1fh">
+                                                <rect key="frame" x="101" y="0.0" width="90" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="90" id="1c1-bg-fe9"/>
+                                                    <constraint firstAttribute="height" constant="90" id="Mc6-aQ-oKU"/>
+                                                </constraints>
+                                                <inset key="titleEdgeInsets" minX="0.0" minY="4" maxX="21" maxY="-63"/>
+                                                <state key="normal" image="さそり座">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="さそり座">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="10" name=".HiraKakuInterface-W3"/>
+                                                                <font key="NSOriginalFont" size="9" name=".HiraKakuInterface-W3"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content=" ">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" metaFont="system" size="7"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="10/24">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.47563" green="0.47565000000000002" blue="0.47564000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="7" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="～">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.47563" green="0.47565000000000002" blue="0.47564000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="7" name="HiraginoSans-W3"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="11/21">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.47563" green="0.47565000000000002" blue="0.47564000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="7" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <connections>
+                                                    <action selector="horoscopeItemsButton:" destination="nto-M2-EkL" eventType="touchUpInside" id="BDC-uL-97Y"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qBn-yK-5yZ">
+                                                <rect key="frame" x="202" y="0.0" width="90" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="7bJ-so-QT6"/>
+                                                    <constraint firstAttribute="width" constant="90" id="dsf-ph-lR3"/>
+                                                </constraints>
+                                                <inset key="titleEdgeInsets" minX="0.0" minY="4" maxX="24" maxY="-63"/>
+                                                <state key="normal" image="いて座">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="いて座">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="10" name=".HiraKakuInterface-W3"/>
+                                                                <font key="NSOriginalFont" size="9" name=".HiraKakuInterface-W3"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content=" ">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" metaFont="system" size="7"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="11/22">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.47563" green="0.47565000000000002" blue="0.47564000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="7" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="～">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.47563" green="0.47565000000000002" blue="0.47564000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="7" name="HiraginoSans-W3"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="12/21">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.47563" green="0.47565000000000002" blue="0.47564000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="7" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <connections>
+                                                    <action selector="horoscopeItemsButton:" destination="nto-M2-EkL" eventType="touchUpInside" id="Gnc-fK-EFJ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="6hb-dg-YT9">
+                                        <rect key="frame" x="0.0" y="288" width="292" height="90"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="10" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Abf-y9-bIy">
+                                                <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="brm-23-OcZ"/>
+                                                    <constraint firstAttribute="width" constant="90" id="vE9-ld-3S6"/>
+                                                </constraints>
+                                                <inset key="titleEdgeInsets" minX="0.0" minY="4" maxX="24" maxY="-63"/>
+                                                <state key="normal" image="やぎ座">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="やぎ座">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="10" name=".HiraKakuInterface-W3"/>
+                                                                <font key="NSOriginalFont" size="9" name=".HiraKakuInterface-W3"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content=" ">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" metaFont="system" size="7"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="12/22">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.47563" green="0.47565000000000002" blue="0.47564000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="7" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="～">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.47563" green="0.47565000000000002" blue="0.47564000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="7" name="HiraginoSans-W3"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="1/19">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.47563" green="0.47565000000000002" blue="0.47564000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="7" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <connections>
+                                                    <action selector="horoscopeItemsButton:" destination="nto-M2-EkL" eventType="touchUpInside" id="cL9-Tr-khy"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="11" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lnJ-nb-nQK">
+                                                <rect key="frame" x="101" y="0.0" width="90" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="90" id="bXn-Zc-SJO"/>
+                                                    <constraint firstAttribute="width" constant="90" id="x3P-Fn-tvh"/>
+                                                </constraints>
+                                                <inset key="titleEdgeInsets" minX="0.0" minY="4" maxX="22" maxY="-63"/>
+                                                <state key="normal" image="みずがめ座">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="みずがめ座">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="10" name=".HiraKakuInterface-W3"/>
+                                                                <font key="NSOriginalFont" size="9" name=".HiraKakuInterface-W3"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content=" ">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" metaFont="system" size="7"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="1/20">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.47563" green="0.47565000000000002" blue="0.47564000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="7" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="～">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.47563" green="0.47565000000000002" blue="0.47564000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="7" name="HiraginoSans-W3"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="2/18">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.47563" green="0.47565000000000002" blue="0.47564000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="7" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <connections>
+                                                    <action selector="horoscopeItemsButton:" destination="nto-M2-EkL" eventType="touchUpInside" id="7CH-Kg-JoO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="12" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="characterWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bv2-po-OTZ">
+                                                <rect key="frame" x="202" y="0.0" width="90" height="90"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="90" id="9Y1-Hi-5mf"/>
+                                                    <constraint firstAttribute="height" constant="90" id="cLQ-iG-MYo"/>
+                                                </constraints>
+                                                <inset key="titleEdgeInsets" minX="0.0" minY="4" maxX="24" maxY="-63"/>
+                                                <state key="normal" image="うお座">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="うお">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="10" name=".HiraKakuInterface-W3"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="座">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="10" name=".HiraKakuInterface-W3"/>
+                                                                <font key="NSOriginalFont" metaFont="system" size="9"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content=" ">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" metaFont="system" size="7"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="2/19">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.47563" green="0.47565000000000002" blue="0.47564000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="7" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="～">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.47563" green="0.47565000000000002" blue="0.47564000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="7" name="HiraginoSans-W3"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="3/20">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.47563" green="0.47565000000000002" blue="0.47564000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" size="7" name="HelveticaNeue"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <connections>
+                                                    <action selector="horoscopeItemsButton:" destination="nto-M2-EkL" eventType="touchUpInside" id="hVC-gR-SR0"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GvY-xd-wK5"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="PPp-NR-lLW" firstAttribute="centerX" secondItem="whp-2Z-UuQ" secondAttribute="centerX" id="37B-FN-fQ5"/>
+                            <constraint firstItem="PPp-NR-lLW" firstAttribute="top" secondItem="L81-Y9-nyi" secondAttribute="bottom" constant="10" id="frM-5Q-xqa"/>
+                            <constraint firstItem="L81-Y9-nyi" firstAttribute="centerX" secondItem="whp-2Z-UuQ" secondAttribute="centerX" id="jWq-bx-I0N"/>
+                            <constraint firstItem="PPp-NR-lLW" firstAttribute="centerY" secondItem="whp-2Z-UuQ" secondAttribute="centerY" constant="20" id="kde-2i-A3t"/>
+                        </constraints>
+                        <directionalEdgeInsets key="directionalLayoutMargins" top="0.0" leading="20" bottom="0.0" trailing="20"/>
                     </view>
                     <navigationItem key="navigationItem" id="M6r-U8-Kmr"/>
+                    <connections>
+                        <segue destination="0j6-uS-ybD" kind="show" identifier="showEachItemVC" id="gr8-zc-LrY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0LQ-uN-OVa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1490" y="535"/>
+            <point key="canvasLocation" x="1488.8" y="534.78260869565224"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Ury-pC-UUP">
@@ -96,7 +835,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="X0v-Uo-9fT" kind="relationship" relationship="rootViewController" id="vCH-wM-pMs"/>
+                        <segue destination="X0v-Uo-9fT" kind="relationship" relationship="rootViewController" id="XS0-Ih-DDB"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SAw-Rm-Gzf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -111,82 +850,208 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="あなたの星座は？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8i-FO-BrQ">
-                                <rect key="frame" x="118" y="89" width="139" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="誕生日を教えてください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fD-aR-wNH">
+                                <rect key="frame" x="86.5" y="273" width="202" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="誕生日を教えてください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1fD-aR-wNH">
-                                <rect key="frame" x="92" y="156" width="191" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hv2-wq-Aok">
-                                <rect key="frame" x="139" y="225" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hv2-wq-Aok">
+                                <rect key="frame" x="112.5" y="316.5" width="150" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="rem-My-E8X"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6L-LK-bns">
+                                <rect key="frame" x="133.5" y="414" width="108" height="30"/>
+                                <state key="normal" title="星座を調べる！"/>
+                                <connections>
+                                    <action selector="judgeHoroscopeButton:" destination="X0v-Uo-9fT" eventType="touchUpInside" id="WGK-mD-Zaw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あなたの星座は？" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k8i-FO-BrQ">
+                                <rect key="frame" x="74" y="171" width="227" height="34"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="j8M-V6-CQa"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hv2-wq-Aok" firstAttribute="centerX" secondItem="ua0-3C-1Qe" secondAttribute="centerX" id="8FL-Ev-Mjh"/>
+                            <constraint firstItem="1fD-aR-wNH" firstAttribute="centerX" secondItem="ua0-3C-1Qe" secondAttribute="centerX" id="BsB-cf-nHs"/>
+                            <constraint firstItem="e6L-LK-bns" firstAttribute="centerX" secondItem="ua0-3C-1Qe" secondAttribute="centerX" id="Cni-NG-c9s"/>
+                            <constraint firstItem="hv2-wq-Aok" firstAttribute="centerY" secondItem="ua0-3C-1Qe" secondAttribute="centerY" id="Ffl-XJ-MDN"/>
+                            <constraint firstItem="hv2-wq-Aok" firstAttribute="top" secondItem="1fD-aR-wNH" secondAttribute="bottom" constant="22.5" id="GNN-wi-SyW"/>
+                            <constraint firstItem="1fD-aR-wNH" firstAttribute="top" secondItem="k8i-FO-BrQ" secondAttribute="bottom" constant="68" id="HRm-Z7-VTY"/>
+                            <constraint firstItem="k8i-FO-BrQ" firstAttribute="centerX" secondItem="ua0-3C-1Qe" secondAttribute="centerX" id="Hc7-mW-VxP"/>
+                            <constraint firstItem="e6L-LK-bns" firstAttribute="top" secondItem="hv2-wq-Aok" secondAttribute="bottom" constant="63.5" id="M47-Qe-ARZ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="GVN-GO-s0s"/>
                     <connections>
                         <outlet property="textField" destination="hv2-wq-Aok" id="YVz-kg-AaV"/>
-                        <segue destination="o3J-CO-ENf" kind="show" id="cYQ-R3-YMF"/>
+                        <segue destination="o3J-CO-ENf" kind="show" identifier="showResultJudgeHoroscopeVC" id="DJv-vP-S9g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8VN-Pg-cXa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1592.8" y="-207.34632683658174"/>
         </scene>
-        <!--View Controller-->
+        <!--Result Judge Horoscope View Controller-->
         <scene sceneID="lLN-KM-tpu">
             <objects>
-                <viewController id="o3J-CO-ENf" sceneMemberID="viewController">
+                <viewController id="o3J-CO-ENf" customClass="ResultJudgeHoroscopeViewController" customModule="SampleApp_Horoscope" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Peb-w2-exe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="huD-mK-80O">
+                                <rect key="frame" x="60" y="188" width="255" height="155"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="155" id="jYR-jP-Fvv"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="双子座です！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Gu-Zf-Cik">
+                                <rect key="frame" x="120.5" y="400" width="134" height="27"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="あなたの星座は" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BmW-3Y-SJx">
+                                <rect key="frame" x="109" y="121" width="157" height="27"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Ly8-a4-Ki2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="huD-mK-80O" firstAttribute="leading" secondItem="Ly8-a4-Ki2" secondAttribute="leading" constant="60" id="1l7-Iv-QtG"/>
+                            <constraint firstItem="BmW-3Y-SJx" firstAttribute="centerX" secondItem="Peb-w2-exe" secondAttribute="centerX" id="5yS-CD-qgc"/>
+                            <constraint firstItem="huD-mK-80O" firstAttribute="centerX" secondItem="Peb-w2-exe" secondAttribute="centerX" id="75G-p6-IQu"/>
+                            <constraint firstItem="7Gu-Zf-Cik" firstAttribute="centerX" secondItem="Peb-w2-exe" secondAttribute="centerX" id="Sls-da-pSS"/>
+                            <constraint firstItem="huD-mK-80O" firstAttribute="top" secondItem="BmW-3Y-SJx" secondAttribute="bottom" constant="40" id="UQJ-Zb-ZIq"/>
+                            <constraint firstItem="7Gu-Zf-Cik" firstAttribute="top" secondItem="huD-mK-80O" secondAttribute="bottom" constant="57" id="VGQ-5s-1Ck"/>
+                            <constraint firstItem="7Gu-Zf-Cik" firstAttribute="centerY" secondItem="Peb-w2-exe" secondAttribute="centerY" constant="80" id="ldl-Ed-lQG"/>
+                            <constraint firstItem="Ly8-a4-Ki2" firstAttribute="trailing" secondItem="huD-mK-80O" secondAttribute="trailing" constant="60" id="wQM-mT-GdD"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="MSk-ID-j2j"/>
+                    <connections>
+                        <outlet property="imageView" destination="huD-mK-80O" id="MNg-vA-d6N"/>
+                        <outlet property="resultHoroscope" destination="7Gu-Zf-Cik" id="VHc-Ge-vbq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u9K-wB-Koo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2478" y="-208"/>
+            <point key="canvasLocation" x="2477.5999999999999" y="-208.24587706146929"/>
         </scene>
-        <!--View Controller-->
+        <!--Horoscope Each Item View Controller-->
         <scene sceneID="2B6-05-KOK">
             <objects>
-                <viewController id="0j6-uS-ybD" sceneMemberID="viewController">
+                <viewController id="0j6-uS-ybD" customClass="HoroscopeEachItemViewController" customModule="SampleApp_Horoscope" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5Ah-6S-yKB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日の運勢" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xsQ-vh-WV2">
+                                <rect key="frame" x="131.5" y="124" width="112" height="27"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="いて座" translatesAutoresizingMaskIntoConstraints="NO" id="B5E-Bi-xLJ">
+                                <rect key="frame" x="47.5" y="156" width="140" height="140"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="13o-Wi-ujh"/>
+                                    <constraint firstAttribute="width" constant="140" id="UFz-dT-vCY"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HcW-ec-lGl">
+                                <rect key="frame" x="231" y="214" width="53.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star2" translatesAutoresizingMaskIntoConstraints="NO" id="d4N-Oe-fJ5">
+                                <rect key="frame" x="-212.5" y="301" width="800" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="KOX-73-emi"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Occ-KX-3gA">
+                                <rect key="frame" x="38" y="371" width="299" height="124"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="124" id="kjX-Sy-YbY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFU-cp-ACS">
+                                <rect key="frame" x="67.5" y="264" width="100" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="Chc-2c-Z3G"/>
+                                    <constraint firstAttribute="height" constant="25" id="XTp-YY-gLG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="4eq-T5-WWH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Occ-KX-3gA" firstAttribute="leading" secondItem="4eq-T5-WWH" secondAttribute="leading" constant="38" id="1ia-6y-Nt9"/>
+                            <constraint firstItem="d4N-Oe-fJ5" firstAttribute="centerX" secondItem="5Ah-6S-yKB" secondAttribute="centerX" id="7fl-f8-X3M"/>
+                            <constraint firstItem="4eq-T5-WWH" firstAttribute="trailing" secondItem="Occ-KX-3gA" secondAttribute="trailing" constant="38" id="GoK-Wi-bsT"/>
+                            <constraint firstItem="d4N-Oe-fJ5" firstAttribute="centerY" secondItem="5Ah-6S-yKB" secondAttribute="centerY" constant="-10" id="OCr-F0-chg"/>
+                            <constraint firstItem="B5E-Bi-xLJ" firstAttribute="centerX" secondItem="5Ah-6S-yKB" secondAttribute="centerX" constant="-70" id="Q3C-Pq-xhy"/>
+                            <constraint firstItem="B5E-Bi-xLJ" firstAttribute="top" secondItem="xsQ-vh-WV2" secondAttribute="bottom" constant="5" id="QAI-Sf-PSd"/>
+                            <constraint firstItem="Occ-KX-3gA" firstAttribute="centerX" secondItem="5Ah-6S-yKB" secondAttribute="centerX" id="Y2E-rV-lhk"/>
+                            <constraint firstItem="Occ-KX-3gA" firstAttribute="top" secondItem="d4N-Oe-fJ5" secondAttribute="bottom" constant="25" id="aiQ-fV-DdC"/>
+                            <constraint firstItem="d4N-Oe-fJ5" firstAttribute="top" secondItem="B5E-Bi-xLJ" secondAttribute="bottom" constant="5" id="eKS-fh-BbH"/>
+                            <constraint firstItem="xsQ-vh-WV2" firstAttribute="centerX" secondItem="5Ah-6S-yKB" secondAttribute="centerX" id="f5s-IU-COg"/>
+                            <constraint firstItem="d4N-Oe-fJ5" firstAttribute="top" secondItem="RFU-cp-ACS" secondAttribute="bottom" constant="12" id="jzP-Ga-Unu"/>
+                            <constraint firstItem="RFU-cp-ACS" firstAttribute="centerX" secondItem="B5E-Bi-xLJ" secondAttribute="centerX" id="kAb-wP-57u"/>
+                            <constraint firstItem="HcW-ec-lGl" firstAttribute="centerX" secondItem="5Ah-6S-yKB" secondAttribute="centerX" constant="70" id="klR-25-s9T"/>
+                            <constraint firstItem="HcW-ec-lGl" firstAttribute="centerY" secondItem="B5E-Bi-xLJ" secondAttribute="centerY" id="tzy-TT-qdt"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="2pE-2i-PWG"/>
+                    <connections>
+                        <outlet property="commentLabel" destination="Occ-KX-3gA" id="ShP-LP-Gwh"/>
+                        <outlet property="horoscopeImageView" destination="B5E-Bi-xLJ" id="0Pd-j0-BOK"/>
+                        <outlet property="horoscopeNameLabel" destination="RFU-cp-ACS" id="DSs-q4-zsb"/>
+                        <outlet property="rankingLabel" destination="HcW-ec-lGl" id="yGj-fn-pDh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kzs-nQ-9QE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2248" y="535"/>
+            <point key="canvasLocation" x="2247.1999999999998" y="534.78260869565224"/>
         </scene>
     </scenes>
     <resources>
+        <image name="star2" width="800" height="178"/>
+        <image name="いて座" width="850" height="850"/>
+        <image name="うお座" width="850" height="850"/>
+        <image name="おうし座" width="850" height="850"/>
+        <image name="おとめ座" width="850" height="850"/>
+        <image name="おひつじ座" width="850" height="850"/>
+        <image name="かに座" width="850" height="850"/>
+        <image name="さそり座" width="850" height="850"/>
+        <image name="しし座" width="850" height="850"/>
+        <image name="てんびん座" width="850" height="850"/>
+        <image name="ふたご座" width="850" height="850"/>
+        <image name="みずがめ座" width="850" height="850"/>
+        <image name="やぎ座" width="850" height="850"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -14,6 +14,9 @@
 		2A2DD6E925C60C7100F152F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A2DD6E825C60C7100F152F6 /* Assets.xcassets */; };
 		2A2DD6EC25C60C7100F152F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A2DD6EA25C60C7100F152F6 /* LaunchScreen.storyboard */; };
 		2A2DD6F625C6219400F152F6 /* JudgeHoroscopeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2DD6F525C6219400F152F6 /* JudgeHoroscopeViewController.swift */; };
+		2A2DD6FC25C7901F00F152F6 /* ResultJudgeHoroscopeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2DD6FB25C7901F00F152F6 /* ResultJudgeHoroscopeViewController.swift */; };
+		2A2DD70225C8D95E00F152F6 /* HoroscopeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2DD70125C8D95E00F152F6 /* HoroscopeViewController.swift */; };
+		2A2DD70625C8DF5A00F152F6 /* HoroscopeEachItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2DD70525C8DF5A00F152F6 /* HoroscopeEachItemViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		2A2DD6EB25C60C7100F152F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A2DD6ED25C60C7100F152F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A2DD6F525C6219400F152F6 /* JudgeHoroscopeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JudgeHoroscopeViewController.swift; sourceTree = "<group>"; };
+		2A2DD6FB25C7901F00F152F6 /* ResultJudgeHoroscopeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultJudgeHoroscopeViewController.swift; sourceTree = "<group>"; };
+		2A2DD70125C8D95E00F152F6 /* HoroscopeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeViewController.swift; sourceTree = "<group>"; };
+		2A2DD70525C8DF5A00F152F6 /* HoroscopeEachItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeEachItemViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 		2A2DD6DE25C60C6F00F152F6 /* SampleApp_Horoscope */ = {
 			isa = PBXGroup;
 			children = (
+				2A2DD70025C8D92D00F152F6 /* Horoscope */,
 				2A2DD6F825C621A000F152F6 /* JudgeHoroscope */,
 				2A2DD6DF25C60C6F00F152F6 /* AppDelegate.swift */,
 				2A2DD6E125C60C6F00F152F6 /* SceneDelegate.swift */,
@@ -74,8 +81,18 @@
 			isa = PBXGroup;
 			children = (
 				2A2DD6F525C6219400F152F6 /* JudgeHoroscopeViewController.swift */,
+				2A2DD6FB25C7901F00F152F6 /* ResultJudgeHoroscopeViewController.swift */,
 			);
 			path = JudgeHoroscope;
+			sourceTree = "<group>";
+		};
+		2A2DD70025C8D92D00F152F6 /* Horoscope */ = {
+			isa = PBXGroup;
+			children = (
+				2A2DD70125C8D95E00F152F6 /* HoroscopeViewController.swift */,
+				2A2DD70525C8DF5A00F152F6 /* HoroscopeEachItemViewController.swift */,
+			);
+			path = Horoscope;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,7 +166,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A2DD6E425C60C6F00F152F6 /* ViewController.swift in Sources */,
+				2A2DD6FC25C7901F00F152F6 /* ResultJudgeHoroscopeViewController.swift in Sources */,
 				2A2DD6F625C6219400F152F6 /* JudgeHoroscopeViewController.swift in Sources */,
+				2A2DD70225C8D95E00F152F6 /* HoroscopeViewController.swift in Sources */,
+				2A2DD70625C8DF5A00F152F6 /* HoroscopeEachItemViewController.swift in Sources */,
 				2A2DD6E025C60C6F00F152F6 /* AppDelegate.swift in Sources */,
 				2A2DD6E225C60C6F00F152F6 /* SceneDelegate.swift in Sources */,
 			);

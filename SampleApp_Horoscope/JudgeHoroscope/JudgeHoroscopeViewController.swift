@@ -12,9 +12,14 @@ class JudgeHoroscopeViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     
     var datePicker: UIDatePicker = UIDatePicker()
+    var horoscope = String()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        //テキストフィールドをクリックしたらUIDatePickerを表示
+        textField.inputView = datePicker
 
         // 日付のみの選択形式を設定
         datePicker.datePickerMode = .date
@@ -22,9 +27,6 @@ class JudgeHoroscopeViewController: UIViewController {
         
         //wheel形式からの選択
         datePicker.preferredDatePickerStyle = .wheels
-        
-        //テキストフィールドをクリックしたらUIDatePickerを表示
-        textField.inputView = datePicker
         
         //DatePicker（Wheel）上のDoneボタンのバーの生成
         let toolbar = UIToolbar()
@@ -55,16 +57,61 @@ class JudgeHoroscopeViewController: UIViewController {
         
     }
     
+    @IBAction func judgeHoroscopeButton(_ sender: Any) {
+        
+        let dateFormatter = DateFormatter()
+        //月日だけを取得
+        dateFormatter.dateFormat = "MMdd"
 
-    /*
-    // MARK: - Navigation
+        // DatePickerから取得した日付をString型へ変換
+        let birthdayString = dateFormatter.string(from: datePicker.date)
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        // String型だと0310などの表示。頭文字の0が不要のため、Int型へ変換
+        let birthdayInt = Int(birthdayString)
+                
+        // オプショナル型のbirthdayIntをオプショナルバインディング
+        if let birthdayInt = birthdayInt {
+            horoscope = judgeHoroscope(withBirthday: birthdayInt)
+        }
+        performSegue(withIdentifier: "showResultJudgeHoroscopeVC",sender: nil)
     }
-    */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let resultVC = segue.destination as! ResultJudgeHoroscopeViewController
+        resultVC.resultString = horoscope
+        resultVC.resultImage = UIImage(named: horoscope)!
+    }
+
+    func judgeHoroscope(withBirthday birthday:Int) -> String {
+        switch birthday {
+        case 120...218:
+            return "みずがめ座"
+        case 219...320:
+            return "うお座"
+        case 321...419:
+            return "おひつじ座"
+        case 420...520:
+            return "おうし座"
+        case 521...621:
+            return "ふたご座"
+        case 622...722:
+            return "かに座"
+        case 723...822:
+            return "しし座"
+        case 823...922:
+            return "おとめ座"
+        case 923...1023:
+            return "てんびん座"
+        case 1024...1122:
+            return "さそり座"
+        case 1123...1221:
+            return "いて座"
+        default:
+            return "やぎ座"
+        }
+
+    }
+
 
 }
 
