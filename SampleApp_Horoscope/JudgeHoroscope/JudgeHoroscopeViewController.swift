@@ -17,6 +17,12 @@ class JudgeHoroscopeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        //タブのボタン画像
+        tabBarController?.tabBar.items![0].image = UIImage(named: "house")
+        tabBarController?.tabBar.items![1].image = UIImage(named: "unsei")
+        tabBarController?.tabBar.items![2].image = UIImage(named: "crown")
+
+
 
         //テキストフィールドをクリックしたらUIDatePickerを表示
         textField.inputView = datePicker
@@ -27,6 +33,18 @@ class JudgeHoroscopeViewController: UIViewController {
         
         //wheel形式からの選択
         datePicker.preferredDatePickerStyle = .wheels
+        
+        // DatePickerの範囲、最大の日付を指定
+        let maxDateString = "2015/01/01"
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy/MM/dd"
+        
+        //String型の日付をNSDate型へ変更
+        let maxDate = dateFormatter.date(from: maxDateString)
+        
+        //最大日をDatePickerへ設定
+        datePicker.maximumDate = maxDate
         
         //DatePicker（Wheel）上のDoneボタンのバーの生成
         let toolbar = UIToolbar()
@@ -59,6 +77,11 @@ class JudgeHoroscopeViewController: UIViewController {
     
     @IBAction func judgeHoroscopeButton(_ sender: Any) {
         
+        //何も入力されていなかったらスルー
+        if textField.text == "" {
+            return
+        }
+        
         let dateFormatter = DateFormatter()
         //月日だけを取得
         dateFormatter.dateFormat = "MMdd"
@@ -82,6 +105,7 @@ class JudgeHoroscopeViewController: UIViewController {
         resultVC.resultImage = UIImage(named: horoscope)!
     }
 
+    //入力された誕生日から星座を判断
     func judgeHoroscope(withBirthday birthday:Int) -> String {
         switch birthday {
         case 120...218:
