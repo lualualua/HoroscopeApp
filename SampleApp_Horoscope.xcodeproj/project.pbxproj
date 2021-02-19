@@ -21,6 +21,11 @@
 		2A8712F125DA0B3C00F14F05 /* HoroscopeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8712EF25DA0B3C00F14F05 /* HoroscopeCollectionViewCell.swift */; };
 		2A8712F225DA0B3C00F14F05 /* HoroscopeCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A8712F025DA0B3C00F14F05 /* HoroscopeCollectionViewCell.xib */; };
 		2A8712FA25DCBDFF00F14F05 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8712F925DCBDFE00F14F05 /* Model.swift */; };
+		2A87130425DF0E8900F14F05 /* EachItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A87130325DF0E8900F14F05 /* EachItemView.xib */; };
+		2A87130825DF15B100F14F05 /* EachItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A87130725DF15B100F14F05 /* EachItemView.swift */; };
+		2A87130C25DF4FF700F14F05 /* RankingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A87130A25DF4FF600F14F05 /* RankingTableViewCell.swift */; };
+		2A87130D25DF4FF700F14F05 /* RankingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A87130B25DF4FF600F14F05 /* RankingTableViewCell.xib */; };
+		2A87131225DF5BC500F14F05 /* Ranking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A87131125DF5BC500F14F05 /* Ranking.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +45,11 @@
 		2A8712EF25DA0B3C00F14F05 /* HoroscopeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeCollectionViewCell.swift; sourceTree = "<group>"; };
 		2A8712F025DA0B3C00F14F05 /* HoroscopeCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HoroscopeCollectionViewCell.xib; sourceTree = "<group>"; };
 		2A8712F925DCBDFE00F14F05 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		2A87130325DF0E8900F14F05 /* EachItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EachItemView.xib; sourceTree = "<group>"; };
+		2A87130725DF15B100F14F05 /* EachItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EachItemView.swift; sourceTree = "<group>"; };
+		2A87130A25DF4FF600F14F05 /* RankingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingTableViewCell.swift; sourceTree = "<group>"; };
+		2A87130B25DF4FF600F14F05 /* RankingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankingTableViewCell.xib; sourceTree = "<group>"; };
+		2A87131125DF5BC500F14F05 /* Ranking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ranking.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +113,8 @@
 				2A8712EF25DA0B3C00F14F05 /* HoroscopeCollectionViewCell.swift */,
 				2A8712F025DA0B3C00F14F05 /* HoroscopeCollectionViewCell.xib */,
 				2A2DD70525C8DF5A00F152F6 /* HoroscopeEachItemViewController.swift */,
+				2A87130325DF0E8900F14F05 /* EachItemView.xib */,
+				2A87130725DF15B100F14F05 /* EachItemView.swift */,
 			);
 			path = Horoscope;
 			sourceTree = "<group>";
@@ -111,6 +123,9 @@
 			isa = PBXGroup;
 			children = (
 				2A60614125D4632F0015ABDF /* RankingTableViewController.swift */,
+				2A87130A25DF4FF600F14F05 /* RankingTableViewCell.swift */,
+				2A87130B25DF4FF600F14F05 /* RankingTableViewCell.xib */,
+				2A87131125DF5BC500F14F05 /* Ranking.swift */,
 			);
 			name = Ranking;
 			path = SampleApp_Horoscope/Ranking;
@@ -177,6 +192,8 @@
 				2A2DD6E925C60C7100F152F6 /* Assets.xcassets in Resources */,
 				2A2DD6E725C60C6F00F152F6 /* Main.storyboard in Resources */,
 				2A8712F225DA0B3C00F14F05 /* HoroscopeCollectionViewCell.xib in Resources */,
+				2A87130D25DF4FF700F14F05 /* RankingTableViewCell.xib in Resources */,
+				2A87130425DF0E8900F14F05 /* EachItemView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,14 +206,17 @@
 			files = (
 				2A8712F125DA0B3C00F14F05 /* HoroscopeCollectionViewCell.swift in Sources */,
 				2A60614225D4632F0015ABDF /* RankingTableViewController.swift in Sources */,
+				2A87130C25DF4FF700F14F05 /* RankingTableViewCell.swift in Sources */,
 				2A2DD6E425C60C6F00F152F6 /* ViewController.swift in Sources */,
 				2A2DD6FC25C7901F00F152F6 /* ResultJudgeHoroscopeViewController.swift in Sources */,
+				2A87131225DF5BC500F14F05 /* Ranking.swift in Sources */,
 				2A2DD6F625C6219400F152F6 /* JudgeHoroscopeViewController.swift in Sources */,
 				2A8712FA25DCBDFF00F14F05 /* Model.swift in Sources */,
 				2A2DD70225C8D95E00F152F6 /* HoroscopeViewController.swift in Sources */,
 				2A2DD70625C8DF5A00F152F6 /* HoroscopeEachItemViewController.swift in Sources */,
 				2A2DD6E025C60C6F00F152F6 /* AppDelegate.swift in Sources */,
 				2A2DD6E225C60C6F00F152F6 /* SceneDelegate.swift in Sources */,
+				2A87130825DF15B100F14F05 /* EachItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

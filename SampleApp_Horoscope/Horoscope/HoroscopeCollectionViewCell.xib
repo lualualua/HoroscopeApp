@@ -17,7 +17,7 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="2yF-w1-9cA">
-                        <rect key="frame" x="0.0" y="382.5" width="449" height="23.5"/>
+                        <rect key="frame" x="0.0" y="384.5" width="449" height="23.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VHl-nQ-idc">
                                 <rect key="frame" x="0.0" y="0.0" width="449" height="13.5"/>
@@ -47,7 +47,7 @@
                 <constraint firstItem="2yF-w1-9cA" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="Ahs-Zn-xFH"/>
                 <constraint firstItem="2yF-w1-9cA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="HSc-OZ-9y7"/>
                 <constraint firstItem="2yF-w1-9cA" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="Hek-JB-uVW"/>
-                <constraint firstAttribute="bottom" secondItem="2yF-w1-9cA" secondAttribute="bottom" constant="3" id="JS2-Bh-yO9"/>
+                <constraint firstAttribute="bottom" secondItem="2yF-w1-9cA" secondAttribute="bottom" constant="1" id="JS2-Bh-yO9"/>
                 <constraint firstItem="1c9-lg-14P" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="LjN-Ja-ge2"/>
                 <constraint firstItem="1c9-lg-14P" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.8" id="P37-tO-nzB"/>
                 <constraint firstAttribute="trailing" secondItem="2yF-w1-9cA" secondAttribute="trailing" id="iho-Z4-m97"/>

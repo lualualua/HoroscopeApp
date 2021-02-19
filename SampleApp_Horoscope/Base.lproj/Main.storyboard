@@ -36,51 +36,6 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="FJ9-ry-zvn">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="83" id="25G-c4-WbI" customClass="TableViewCell" customModule="SampleApp_Horoscope" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="55.5" width="414" height="83"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="25G-c4-WbI" id="vvC-Zm-zVv">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="83"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="f3B-fJ-wiR">
-                                                    <rect key="frame" x="62" y="16.5" width="50" height="50"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="50" id="0nn-Br-7ZD"/>
-                                                        <constraint firstAttribute="height" constant="50" id="K8F-hf-Nz9"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hrM-I8-gl6">
-                                                    <rect key="frame" x="122" y="1.5" width="80" height="80"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="80" id="5IH-0a-d7T"/>
-                                                        <constraint firstAttribute="width" constant="80" id="mtM-d1-n9T"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="529-Ur-lOX">
-                                                    <rect key="frame" x="217" y="34" width="32" height="15.5"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="hrM-I8-gl6" firstAttribute="leading" secondItem="f3B-fJ-wiR" secondAttribute="trailing" constant="10" id="4la-rp-EIH"/>
-                                                <constraint firstItem="hrM-I8-gl6" firstAttribute="centerY" secondItem="vvC-Zm-zVv" secondAttribute="centerY" id="4nq-wj-X4o"/>
-                                                <constraint firstItem="f3B-fJ-wiR" firstAttribute="centerY" secondItem="hrM-I8-gl6" secondAttribute="centerY" id="4wv-W3-YpQ"/>
-                                                <constraint firstItem="529-Ur-lOX" firstAttribute="leading" secondItem="hrM-I8-gl6" secondAttribute="trailing" constant="15" id="Ci3-rr-434"/>
-                                                <constraint firstItem="529-Ur-lOX" firstAttribute="centerY" secondItem="vvC-Zm-zVv" secondAttribute="centerY" id="MQc-mu-gSU"/>
-                                                <constraint firstItem="hrM-I8-gl6" firstAttribute="centerX" secondItem="vvC-Zm-zVv" secondAttribute="centerX" constant="-45" id="nSG-ds-eF3"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="horoscopeImage" destination="hrM-I8-gl6" id="9pW-i1-LDT"/>
-                                            <outlet property="horoscopeNameLabel" destination="529-Ur-lOX" id="ujH-mn-Utn"/>
-                                            <outlet property="rankingImage" destination="f3B-fJ-wiR" id="kmi-n1-Zrz"/>
-                                        </connections>
-                                    </tableViewCell>
-                                </prototypes>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bXS-bw-ylM"/>
@@ -304,7 +259,7 @@
             </objects>
             <point key="canvasLocation" x="2477.5999999999999" y="-208.24587706146929"/>
         </scene>
-        <!--Horoscope Each Item View Controller-->
+        <!--今日の運勢-->
         <scene sceneID="2B6-05-KOK">
             <objects>
                 <viewController id="0j6-uS-ybD" customClass="HoroscopeEachItemViewController" customModule="SampleApp_Horoscope" customModuleProvider="target" sceneMemberID="viewController">
@@ -312,76 +267,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日の運勢" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xsQ-vh-WV2">
-                                <rect key="frame" x="151.5" y="239" width="111.5" height="26.5"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="いて座" translatesAutoresizingMaskIntoConstraints="NO" id="B5E-Bi-xLJ">
-                                <rect key="frame" x="67" y="270.5" width="140" height="140"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="140" id="13o-Wi-ujh"/>
-                                    <constraint firstAttribute="width" constant="140" id="UFz-dT-vCY"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HcW-ec-lGl">
-                                <rect key="frame" x="250.5" y="328.5" width="53.5" height="24"/>
-                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star2" translatesAutoresizingMaskIntoConstraints="NO" id="d4N-Oe-fJ5">
-                                <rect key="frame" x="-193" y="415.5" width="800" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="KOX-73-emi"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFU-cp-ACS">
-                                <rect key="frame" x="87" y="378.5" width="100" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="Chc-2c-Z3G"/>
-                                    <constraint firstAttribute="height" constant="25" id="XTp-YY-gLG"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Occ-KX-3gA">
-                                <rect key="frame" x="82" y="485.5" width="250" height="124"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="dgr-w1-9Os"/>
-                                    <constraint firstAttribute="height" constant="124" id="kjX-Sy-YbY"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gAp-gd-grC" customClass="EachItemView" customModule="SampleApp_Horoscope" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="4eq-T5-WWH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="d4N-Oe-fJ5" firstAttribute="centerX" secondItem="5Ah-6S-yKB" secondAttribute="centerX" id="7fl-f8-X3M"/>
-                            <constraint firstItem="d4N-Oe-fJ5" firstAttribute="centerY" secondItem="5Ah-6S-yKB" secondAttribute="centerY" constant="-10" id="OCr-F0-chg"/>
-                            <constraint firstItem="B5E-Bi-xLJ" firstAttribute="centerX" secondItem="5Ah-6S-yKB" secondAttribute="centerX" constant="-70" id="Q3C-Pq-xhy"/>
-                            <constraint firstItem="B5E-Bi-xLJ" firstAttribute="top" secondItem="xsQ-vh-WV2" secondAttribute="bottom" constant="5" id="QAI-Sf-PSd"/>
-                            <constraint firstItem="Occ-KX-3gA" firstAttribute="centerX" secondItem="5Ah-6S-yKB" secondAttribute="centerX" id="Y2E-rV-lhk"/>
-                            <constraint firstItem="Occ-KX-3gA" firstAttribute="top" secondItem="d4N-Oe-fJ5" secondAttribute="bottom" constant="25" id="aiQ-fV-DdC"/>
-                            <constraint firstItem="d4N-Oe-fJ5" firstAttribute="top" secondItem="B5E-Bi-xLJ" secondAttribute="bottom" constant="5" id="eKS-fh-BbH"/>
-                            <constraint firstItem="xsQ-vh-WV2" firstAttribute="centerX" secondItem="5Ah-6S-yKB" secondAttribute="centerX" id="f5s-IU-COg"/>
-                            <constraint firstItem="d4N-Oe-fJ5" firstAttribute="top" secondItem="RFU-cp-ACS" secondAttribute="bottom" constant="12" id="jzP-Ga-Unu"/>
-                            <constraint firstItem="RFU-cp-ACS" firstAttribute="centerX" secondItem="B5E-Bi-xLJ" secondAttribute="centerX" id="kAb-wP-57u"/>
-                            <constraint firstItem="HcW-ec-lGl" firstAttribute="centerX" secondItem="5Ah-6S-yKB" secondAttribute="centerX" constant="70" id="klR-25-s9T"/>
-                            <constraint firstItem="HcW-ec-lGl" firstAttribute="centerY" secondItem="B5E-Bi-xLJ" secondAttribute="centerY" id="tzy-TT-qdt"/>
+                            <constraint firstItem="4eq-T5-WWH" firstAttribute="trailing" secondItem="gAp-gd-grC" secondAttribute="trailing" id="cM4-BQ-kLz"/>
+                            <constraint firstItem="gAp-gd-grC" firstAttribute="leading" secondItem="4eq-T5-WWH" secondAttribute="leading" id="fyU-Fn-pxv"/>
+                            <constraint firstItem="gAp-gd-grC" firstAttribute="top" secondItem="4eq-T5-WWH" secondAttribute="top" id="rva-fm-Rc5"/>
+                            <constraint firstItem="4eq-T5-WWH" firstAttribute="bottom" secondItem="gAp-gd-grC" secondAttribute="bottom" id="wOB-JS-9Ip"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="2pE-2i-PWG"/>
+                    <navigationItem key="navigationItem" title="今日の運勢" id="2pE-2i-PWG"/>
                     <connections>
-                        <outlet property="commentLabel" destination="Occ-KX-3gA" id="ShP-LP-Gwh"/>
-                        <outlet property="horoscopeImageView" destination="B5E-Bi-xLJ" id="0Pd-j0-BOK"/>
-                        <outlet property="horoscopeNameLabel" destination="RFU-cp-ACS" id="DSs-q4-zsb"/>
-                        <outlet property="rankingLabel" destination="HcW-ec-lGl" id="yGj-fn-pDh"/>
-                        <outlet property="starImage" destination="d4N-Oe-fJ5" id="pz6-s1-ZUE"/>
+                        <outlet property="eachItemView" destination="gAp-gd-grC" id="UdU-B5-DrK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kzs-nQ-9QE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -390,8 +292,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="star2" width="800" height="178"/>
-        <image name="いて座" width="850" height="850"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

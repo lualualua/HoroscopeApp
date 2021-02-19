@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomTableviewCell" id="KGk-i7-Jjw" customClass="RankingTableViewCell" customModule="SampleApp_Horoscope" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="0u9-BC-dxI">
+                        <rect key="frame" x="10" y="19" width="310" height="62.5"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RRZ-Lt-go6">
+                                <rect key="frame" x="0.0" y="11.5" width="39" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="RRZ-Lt-go6" secondAttribute="height" multiplier="1:1" id="2rq-R8-t50"/>
+                                    <constraint firstAttribute="width" constant="39" id="Ifz-Cb-pou"/>
+                                    <constraint firstAttribute="height" constant="39" id="hcZ-VL-M4u"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0dT-MT-q4i">
+                                <rect key="frame" x="51" y="0.0" width="62.5" height="62.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62.5" id="Dp6-6D-YZo"/>
+                                    <constraint firstAttribute="width" secondItem="0dT-MT-q4i" secondAttribute="height" multiplier="1:1" id="OeO-Zc-Lya"/>
+                                    <constraint firstAttribute="height" constant="62.5" id="jcG-bQ-QNp"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GQf-pC-omd">
+                                <rect key="frame" x="125.5" y="23.5" width="184.5" height="15.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="RRZ-Lt-go6" firstAttribute="centerY" secondItem="0u9-BC-dxI" secondAttribute="centerY" id="RWK-TL-z3B"/>
+                            <constraint firstItem="0dT-MT-q4i" firstAttribute="centerY" secondItem="0u9-BC-dxI" secondAttribute="centerY" id="f8o-cG-NCw"/>
+                            <constraint firstItem="GQf-pC-omd" firstAttribute="centerY" secondItem="0u9-BC-dxI" secondAttribute="centerY" id="sff-8f-qVJ"/>
+                        </constraints>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="0u9-BC-dxI" secondAttribute="trailing" id="emo-jX-2e4"/>
+                    <constraint firstItem="0u9-BC-dxI" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="i9R-dS-GbW"/>
+                    <constraint firstItem="0u9-BC-dxI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="zaH-ks-xKU"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="horoscopeImageView" destination="0dT-MT-q4i" id="nhI-74-dQz"/>
+                <outlet property="horoscopeNameLabel" destination="GQf-pC-omd" id="tER-Co-Rxh"/>
+                <outlet property="rankingImageView" destination="RRZ-Lt-go6" id="zsG-c5-La5"/>
+            </connections>
+            <point key="canvasLocation" x="31.884057971014496" y="136.60714285714286"/>
+        </tableViewCell>
+    </objects>
+</document>

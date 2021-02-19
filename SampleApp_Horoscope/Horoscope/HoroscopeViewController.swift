@@ -18,17 +18,6 @@ class HoroscopeViewController: UIViewController {
         var horoscopeSelected = String()
         var ranking = String()
 
-        
-//        //どの星座のボタンを押されたかを判断
-//        @IBAction func horoscopeItemsButton(_ sender: UIButton) {
-//            if let type = HoroscopeType(rawValue: sender.tag) {
-//                horoscopeSelected = type.name
-//                ranking = type.rankingEnum
-//
-//        }
-//        performSegue(withIdentifier: "showEachItemVC", sender: nil)
-//    }
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,13 +27,13 @@ class HoroscopeViewController: UIViewController {
         collectionView.register(UINib(nibName: "HoroscopeCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CustomCell")
     }
     
-
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let eachItemVC = segue.destination as! HoroscopeEachItemViewController
-//        eachItemVC.horoscopeImage = UIImage(named: horoscopeSelected)!
-//        eachItemVC.horoscopeName = horoscopeSelected
-//        eachItemVC.rankingString = ranking
-//    }
+    //Segue準備
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let eachItemVC = segue.destination as! HoroscopeEachItemViewController
+        eachItemVC.horoscopeImage = UIImage(named: horoscopeSelected)!
+        eachItemVC.horoscopeName = horoscopeSelected
+        eachItemVC.rankingString = ranking
+    }
 }
 
     //collectionView
@@ -57,7 +46,7 @@ extension HoroscopeViewController: UICollectionViewDataSource {
     //indexPath.rowに合わせてModelから情報を引っ張ってきて、各セルにそれぞれイラスト・星座名・日付期間を配置
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier:"CustomCell",for:indexPath) as! HoroscopeCollectionViewCell
-        //enumのrawvalueは0から設定しているため、indexPath.rowに1を追加
+        //enumのrawvalueは1から設定しているため、indexPath.rowに1を追加
         if let horoscopetype = HoroscopeType(rawValue: indexPath.row+1){
             cell.setupCell(horoscopeType: horoscopetype)
         }
@@ -103,5 +92,12 @@ extension HoroscopeViewController: UICollectionViewDelegateFlowLayout {
 }
 
 extension HoroscopeViewController: UICollectionViewDelegate {
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //どの星座のボタンを押されたかを判断
+        if let horoscopetype = HoroscopeType(rawValue: indexPath.row+1){
+            horoscopeSelected = horoscopetype.name
+            ranking = horoscopetype.rankingEnum
+        }
+        performSegue(withIdentifier: "showEachItemVC", sender: nil)
+    }
 }

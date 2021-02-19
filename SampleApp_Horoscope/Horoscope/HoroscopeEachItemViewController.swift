@@ -9,11 +9,7 @@ import UIKit
 
 class HoroscopeEachItemViewController: UIViewController {
     
-    @IBOutlet weak var horoscopeImageView: UIImageView!
-    @IBOutlet weak var horoscopeNameLabel: UILabel!
-    @IBOutlet weak var rankingLabel: UILabel!
-    @IBOutlet weak var commentLabel: UILabel!
-    @IBOutlet weak var starImage: UIImageView!
+    @IBOutlet weak var eachItemView: EachItemView!
     
     var rankingString = String()
     var horoscopeImage = UIImage()
@@ -25,11 +21,11 @@ class HoroscopeEachItemViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        horoscopeImageView.image = horoscopeImage
-        horoscopeNameLabel.text = horoscopeName
-        rankingLabel.text = "\(rankingString)位"
-        starImage.image = UIImage(named: showStarImages()!)
-        commentLabel.text = commentData[showComment()!]
+        eachItemView.horoscopeImageView.image = horoscopeImage
+        eachItemView.horoscopeNameLabel.text = horoscopeName
+        eachItemView.rankingLabel.text = "\(rankingString)位"
+        eachItemView.starImageView.image = UIImage(named: showStarImages()!)
+        eachItemView.commentLabel.text = commentData[showComment()!]
     }
     
     //順位に合わせて星の数を変更
