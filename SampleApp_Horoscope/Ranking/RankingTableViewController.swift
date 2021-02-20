@@ -50,7 +50,7 @@ class RankingTableViewController: UIViewController, UITableViewDataSource, UITab
     
     //行の高さ
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
+        return 60
     }
 
 }

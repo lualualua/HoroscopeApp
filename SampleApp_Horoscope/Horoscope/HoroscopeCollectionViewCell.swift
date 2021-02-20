@@ -9,15 +9,10 @@ import UIKit
 
 class HoroscopeCollectionViewCell: UICollectionViewCell {
 
-    @IBOutlet weak var horoscopeImageView: UIImageView!
-    @IBOutlet weak var horoscopeNameLabel: UILabel!
-    @IBOutlet weak var horoscopeDateLabel: UILabel!
+    @IBOutlet weak private var horoscopeImageView: UIImageView!
+    @IBOutlet weak private var horoscopeNameLabel: UILabel!
+    @IBOutlet weak private var horoscopeDateLabel: UILabel!
     
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
     
     //セルのImageView・ラベルにそれぞれイラスト・名前・日付をセット
     func setupCell(horoscopeType: HoroscopeType) {
