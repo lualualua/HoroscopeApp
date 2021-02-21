@@ -23,7 +23,7 @@ class RankingTableViewController: UIViewController, UITableViewDataSource, UITab
         
         tableView.register(UINib(nibName: "RankingTableViewCell", bundle: nil), forCellReuseIdentifier: "CustomTableviewCell")
         
-        //星座の数だけrankingsのArray？にデータを追加していく
+        //星座の数だけrankingsのArrayにデータを追加していく
         for i in 0..<horoscopeNames.count {
             rankings.append(Ranking(rankingImageView: rankingImages[i], horoscopeImageView: horoscopeNames[i], horoscopeName: horoscopeNames[i]))
         }

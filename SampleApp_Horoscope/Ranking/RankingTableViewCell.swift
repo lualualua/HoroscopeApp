@@ -9,14 +9,10 @@ import UIKit
 
 class RankingTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var rankingImageView: UIImageView!
-    @IBOutlet weak var horoscopeImageView: UIImageView!
-    @IBOutlet weak var horoscopeNameLabel: UILabel!
+    @IBOutlet weak private var rankingImageView: UIImageView!
+    @IBOutlet weak private var horoscopeImageView: UIImageView!
+    @IBOutlet weak private var horoscopeNameLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
     
     func setCell(ranking: Ranking) {
         self.rankingImageView.image = UIImage(named: ranking.rankingImageView)
@@ -24,10 +20,4 @@ class RankingTableViewCell: UITableViewCell {
         self.horoscopeNameLabel.text = ranking.horoscopeName
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }
