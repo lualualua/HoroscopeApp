@@ -18,6 +18,7 @@
 		2A2DD70225C8D95E00F152F6 /* HoroscopeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2DD70125C8D95E00F152F6 /* HoroscopeViewController.swift */; };
 		2A2DD70625C8DF5A00F152F6 /* HoroscopeEachItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2DD70525C8DF5A00F152F6 /* HoroscopeEachItemViewController.swift */; };
 		2A60614225D4632F0015ABDF /* RankingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A60614125D4632F0015ABDF /* RankingTableViewController.swift */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		2A2DD70125C8D95E00F152F6 /* HoroscopeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeViewController.swift; sourceTree = "<group>"; };
 		2A2DD70525C8DF5A00F152F6 /* HoroscopeEachItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeEachItemViewController.swift; sourceTree = "<group>"; };
 		2A60614125D4632F0015ABDF /* RankingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingTableViewController.swift; sourceTree = "<group>"; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A60614225D4632F0015ABDF /* RankingTableViewController.swift in Sources */,
+
 				2A2DD6E425C60C6F00F152F6 /* ViewController.swift in Sources */,
 				2A2DD6FC25C7901F00F152F6 /* ResultJudgeHoroscopeViewController.swift in Sources */,
 				2A2DD6F625C6219400F152F6 /* JudgeHoroscopeViewController.swift in Sources */,

@@ -43,6 +43,7 @@ class HoroscopeViewController: UIViewController {
                 horoscopeSelected = type.name
                 ranking = type.rankingEnum
             
+
         }
         performSegue(withIdentifier: "showEachItemVC", sender: nil)
     }
