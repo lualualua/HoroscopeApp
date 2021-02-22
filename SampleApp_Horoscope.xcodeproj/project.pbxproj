@@ -17,7 +17,8 @@
 		2A2DD6FC25C7901F00F152F6 /* ResultJudgeHoroscopeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2DD6FB25C7901F00F152F6 /* ResultJudgeHoroscopeViewController.swift */; };
 		2A2DD70225C8D95E00F152F6 /* HoroscopeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2DD70125C8D95E00F152F6 /* HoroscopeViewController.swift */; };
 		2A2DD70625C8DF5A00F152F6 /* HoroscopeEachItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A2DD70525C8DF5A00F152F6 /* HoroscopeEachItemViewController.swift */; };
-		2AC8B54B25CB22E900A2BF0B /* RankingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC8B54A25CB22E900A2BF0B /* RankingTableViewController.swift */; };
+		2A60614225D4632F0015ABDF /* RankingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A60614125D4632F0015ABDF /* RankingTableViewController.swift */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +34,8 @@
 		2A2DD6FB25C7901F00F152F6 /* ResultJudgeHoroscopeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultJudgeHoroscopeViewController.swift; sourceTree = "<group>"; };
 		2A2DD70125C8D95E00F152F6 /* HoroscopeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeViewController.swift; sourceTree = "<group>"; };
 		2A2DD70525C8DF5A00F152F6 /* HoroscopeEachItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HoroscopeEachItemViewController.swift; sourceTree = "<group>"; };
-		2AC8B54A25CB22E900A2BF0B /* RankingTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingTableViewController.swift; sourceTree = "<group>"; };
+		2A60614125D4632F0015ABDF /* RankingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingTableViewController.swift; sourceTree = "<group>"; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				2A2DD70025C8D92D00F152F6 /* Horoscope */,
-				2AC8B54925CB22BC00A2BF0B /* Ranking */,
+				2A60614025D4632F0015ABDF /* Ranking */,
 				2A2DD6F825C621A000F152F6 /* JudgeHoroscope */,
 				2A2DD6DF25C60C6F00F152F6 /* AppDelegate.swift */,
 				2A2DD6E125C60C6F00F152F6 /* SceneDelegate.swift */,
@@ -98,13 +100,14 @@
 			path = Horoscope;
 			sourceTree = "<group>";
 		};
-		2AC8B54925CB22BC00A2BF0B /* Ranking */ = {
+		2A60614025D4632F0015ABDF /* Ranking */ = {
 			isa = PBXGroup;
 			children = (
-				2AC8B54A25CB22E900A2BF0B /* RankingTableViewController.swift */,
+				2A60614125D4632F0015ABDF /* RankingTableViewController.swift */,
 			);
-			path = Ranking;
-			sourceTree = "<group>";
+			name = Ranking;
+			path = SampleApp_Horoscope/Ranking;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -176,7 +179,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2AC8B54B25CB22E900A2BF0B /* RankingTableViewController.swift in Sources */,
+				2A60614225D4632F0015ABDF /* RankingTableViewController.swift in Sources */,
+
 				2A2DD6E425C60C6F00F152F6 /* ViewController.swift in Sources */,
 				2A2DD6FC25C7901F00F152F6 /* ResultJudgeHoroscopeViewController.swift in Sources */,
 				2A2DD6F625C6219400F152F6 /* JudgeHoroscopeViewController.swift in Sources */,
