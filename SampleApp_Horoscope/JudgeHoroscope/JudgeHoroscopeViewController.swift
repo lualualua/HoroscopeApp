@@ -21,12 +21,16 @@ class JudgeHoroscopeViewController: UIViewController {
         tabBarController?.tabBar.items![0].image = UIImage(named: "house")
         tabBarController?.tabBar.items![1].image = UIImage(named: "unsei")
         tabBarController?.tabBar.items![2].image = UIImage(named: "crown")
-
-
-
+        
+        setDatePicker()
+        setToolbar()
+        
+    }
+    
+    //datePickerの設定
+    func setDatePicker() {
         //テキストフィールドをクリックしたらUIDatePickerを表示
         textField.inputView = datePicker
-
         // 日付のみの選択形式を設定
         datePicker.datePickerMode = .date
         datePicker.locale = Locale(identifier: "ja-JP")
@@ -46,6 +50,10 @@ class JudgeHoroscopeViewController: UIViewController {
         //最大日をDatePickerへ設定
         datePicker.maximumDate = maxDate
         
+    }
+    
+    //toolbarの設定
+    func setToolbar() {
         //DatePicker（Wheel）上のDoneボタンのバーの生成
         let toolbar = UIToolbar()
         //sizeToFitで自動的にtoolBarの高さを設定
@@ -61,9 +69,9 @@ class JudgeHoroscopeViewController: UIViewController {
         textField.inputAccessoryView = toolbar
     }
     
+    
     //UIdatePickerのDoneを押したら発火
     @objc func done() {
-        
         //UIDatePickerを閉じる
         textField.endEditing(true)
         
